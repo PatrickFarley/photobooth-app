@@ -7,7 +7,7 @@ document.getElementById('app-root').innerHTML = `
     <div id="camera-error" style="color:red; margin-top:1em;"></div>
     <div style="margin-top:1.5em;">
       <button id="start-sequence" style="padding:0.7em 1.5em; font-size:1.1em;">Start Photo Sequence</button>
-      <span id="countdown" style="margin-left:1.5em; font-size:1.2em; color:#555;"></span>
+      <div><span id="countdown" style="margin-left:1.5em; font-size:1.2em; color:#555;"></span></div>
     </div>
     <div id="thumbnails" style="margin-top:1.5em; display:flex; gap:10px;"></div>
   </div>
@@ -97,8 +97,14 @@ async function runPhotoSequence() {
   capturedImages = [];
   thumbnails.innerHTML = '';
   for (let i = 0; i < 4; i++) {
-    countdownEl.textContent = `Get ready... ${3 - i}`;
-    await new Promise(res => setTimeout(res, 1000));
+    countdownEl.textContent = `Photo ${i+1}: Get ready...`;
+    await new Promise(res => setTimeout(res, 2000));
+    countdownEl.textContent = '3...';
+    await new Promise(res => setTimeout(res, 500));
+    countdownEl.textContent = '2...';
+    await new Promise(res => setTimeout(res, 500));
+    countdownEl.textContent = '1...';
+    await new Promise(res => setTimeout(res, 500));
     countdownEl.textContent = 'Smile!';
     await new Promise(res => setTimeout(res, 500));
     const imgData = capturePhoto();
