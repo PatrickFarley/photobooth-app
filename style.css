@@ -6,6 +6,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Courier New';
+  src: url('./fonts/COUR.TTF') format('truetype');
+  /* Or use .otf and format('opentype') if you prefer */
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 
 html, body {
