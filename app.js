@@ -133,13 +133,13 @@ const photoSheetSection = document.createElement('div');
 photoSheetSection.id = 'photo-sheet-section';
 photoSheetSection.style.marginTop = '2em';
 photoSheetSection.innerHTML = `
-  <button id="compose-sheet" style="padding:0.7em 1.5em; font-size:1.1em;">Compose Photo Sheet</button>
+  <button id="compose-sheet" style="padding:0.7em 1.5em; font-size:1.1em;">Get Photo Sheet</button>
   <div style="margin-top:1em;">
     <canvas id="photo-sheet-canvas" width="400" height="600" style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"></canvas>
   </div>
   <div style="margin-top:1em;">
     <input id="sheet-text" type="text" placeholder="Add text (optional)" style="font-size:1em; padding:0.5em; width:60%;">
-    <button id="download-sheet" style="padding:0.5em 1.2em; font-size:1em; margin-top:1em;">Download Sheet</button>
+    <button id="download-sheet" style="padding:0.5em 1.2em; font-size:1em; margin-top:1em;">Download Photo Sheet</button>
   </div>
 `;
 appRoot.appendChild(photoSheetSection);
