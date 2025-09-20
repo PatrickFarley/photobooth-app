@@ -37,3 +37,9 @@
 - WebRTC (`getUserMedia`), Canvas API
 
 
+---
+
+Now let's make it better adaptive to mobile displays. I'm looking at it on mobile and I want to make the fillowing changes:
+1) The h1 padding should scale with the screen size (it is too big on small screens)
+2) the video element should shrink so it fits within the width of its camera-section element
+3) the photo-sheet-canvas should shrink so that it fits the width of its parent div element.
